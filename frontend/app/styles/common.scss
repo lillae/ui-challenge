@@ -1,0 +1,22 @@
+@use 'variables';
+
+.signUpBtn {
+	background: variables.$accent-color;
+	color: black;
+	width: fit-content;
+	padding: 0.4rem 1rem;
+	border-radius: 3px;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.loginBtn {
+	background: transparent;
+	border: 1px solid variables.$accent-color;
+	width: fit-content;
+	padding: 0.4rem 1rem;
+	border-radius: 3px;
+	color: variables.$accent-color;
+	text-decoration: none;
+	font-weight: 500;
+}
