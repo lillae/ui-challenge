@@ -1,13 +1,10 @@
 import Link from 'next/link';
-import '@/styles/common.scss';
 
-type LoginBtnProps = {
-	children: React.ReactNode;
-	href: string;
-};
-const LoginButton = ({ children, href }: LoginBtnProps) => {
+import { LinkProps } from '@/lib/types/common-types';
+
+const LoginButton = ({ children, href }: LinkProps) => {
 	return (
-		<Link href={href} className='loginBtn'>
+		<Link href={href} className='login-btn'>
 			{children}
 		</Link>
 	);

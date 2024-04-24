@@ -1,9 +1,15 @@
 import type { Metadata } from 'next';
 import { Unbounded } from 'next/font/google';
-import './styles/globals.scss';
+
+import { ClerkProvider } from '@clerk/nextjs';
+
+import './styles/styles.scss';
 import { Header } from '@/ui/common/layout';
 
-const unbounded = Unbounded({ subsets: ['latin'] });
+const unbounded = Unbounded({
+	subsets: ['latin'],
+	variable: '--font-unbounded',
+});
 
 export const metadata: Metadata = {
 	title: 'UI Challenge | Home',
@@ -16,11 +22,13 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
-			<body className={unbounded.className}>
-				<Header />
-				{children}
-			</body>
-		</html>
+		<ClerkProvider>
+			<html lang='en'>
+				<body className={unbounded.className}>
+					<Header />
+					{children}
+				</body>
+			</html>
+		</ClerkProvider>
 	);
 }

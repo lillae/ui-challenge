@@ -1,5 +1,6 @@
 // :root {
 // }
+@use 'variables';
 
 * {
 	box-sizing: border-box;
@@ -15,7 +16,7 @@ body {
 
 body {
 	background: #000000;
-	color: #f9f9f9;
+	color: variables.$primary-color;
 }
 
 main {
@@ -23,20 +24,26 @@ main {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	padding: 6rem;
-	min-height: 100vh;
+	padding-top: 6rem;
+}
+
+.wrapper {
+	@include wrapper;
+}
+
+section {
+	@include wrapper;
 }
 
 h1 {
 	font-size: 3rem;
 }
 
-header {
-	height: 60px;
-	width: 100%;
-	padding: 0 1rem;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	column-gap: 1rem;
+a {
+	text-decoration: none;
+	color: variables.$primary-color;
+}
+
+button {
+	font-family: 'Unbounded', sans-serif;
 }

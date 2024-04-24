@@ -1,13 +1,11 @@
 import Link from 'next/link';
-import '@/styles/common.scss';
 
-type SignUpBtnProps = {
-	children: React.ReactNode;
-	href: string;
-};
-const SignUpButton = ({ children, href }: SignUpBtnProps) => {
+
+import { LinkProps } from '@/lib/types/common-types';
+
+const SignUpButton = ({ children, href }: LinkProps) => {
 	return (
-		<Link href={href} className='signUpBtn'>
+		<Link href={href} className='signup-btn'>
 			{children}
 		</Link>
 	);
